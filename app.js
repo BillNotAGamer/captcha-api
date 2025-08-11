@@ -1,7 +1,9 @@
 const express = require('express');
 const { createCanvas } = require('canvas');
 const app = express();
+const cors = require('cors');
 
+app.use(cors());
 app.use(express.json());
 
 // Lưu trữ mã captcha tạm thời (nên dùng Redis trong thực tế)
